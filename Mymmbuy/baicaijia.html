@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买白菜价列表</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+
+<body>
+
+    <div class="mui-scroll-wrapper mui-scroll-wrapper-copy">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header hearder_pos">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mmbuy_bg mui-clearfix">
+                    <a href="javascript:history.go(-1);" class="pos_left">
+                        <span class="mui-icon mui-icon-arrowleft"></span>
+                    </a>
+                    <h1>白菜价-淘宝内部价</h1>
+                    <div class="pos_right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 左右滑动的菜单 -->
+            <div class="baicia_nav">
+                <!-- 导航左右滑动网址 -->
+                <!-- https://blog.csdn.net/kanglovejava/article/details/53538389 -->
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div class="mui-scroll">
+                        <!-- 动态模板渲染 -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主题内容 -->
+            <div class="container">
+                <!-- 内部商品 -->
+                <!-- 模板引擎渲染 -->
+                
+            </div>
+
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- <script src="./js/common.js"></script> -->
+    <script src="./js/baicaijia.js"></script>
+
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+            <a class="mui-control-item i==0?'mui-active':''" href="baicaijia.html?titleid={{v.titleId}}">
+                {{v.title}}
+            </a>
+        {{/each}}
+            
+    </script>
+    <script type="text/html" id="tpl2">
+        {{each result v i}}
+        <div class="inItem mui-clearfix">
+            <!-- 商品图片 -->
+            <div class="inItem_pic mui-pull-left">
+                {{@v.productImg}}
+            </div>
+            <!-- 商品信息 -->
+            <div class="inItem_info mui-pull-left">
+                <!-- 商品名称 -->
+                <div class="info_name mui-ellipsis">
+                    {{@v.productName}}
+                </div>
+                <!-- 卷后 -->
+                <div class="info_roll">
+                    {{@v.productPrice}}
+                </div>
+                <!-- 卷的使用 -->
+                {{@v.productCouponRemain}}
+                <div class="inItem_box mui-clearfix">
+                    <!-- 领取优惠卷 -->
+                    <div class="inItem_get">
+                        {{@v.productCoupon}}
+                    </div>
+                    <!-- 下单连接 -->
+                    <div class="inItem_order">
+                        {{@v.productHref}}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>

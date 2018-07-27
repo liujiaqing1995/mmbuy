@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买首页</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mui-clearfix">
+                    <a href="index.html" class="mui-pull-left">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="mui-pull-right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <!-- 头部下面 -->
+                <div class="mmbuy_hbottom">
+                    <div class="mhb_content">
+                        <input type="text" placeholder="请输入你想比价的商品" ,>
+                    </div>
+                    <button class="but">搜索</button>
+
+                </div>
+            </div>
+            <!-- 首页导航 -->
+            <div class="mmbuy_nav">
+                <ul class="mui-clearfix">
+                    <!-- 模板引擎渲染 -->
+                </ul>
+            </div>
+            <!-- 超值折扣 -->
+            <div class="mmbuy_cheap">
+                <div class="mmbc_title mmbuy_goods">
+                    超值折扣推荐
+                    <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+                </div>
+                <div class="mmbc_content">
+                    <ul class="mui-table-view">
+                        <!-- 模板引擎动态渲染 -->
+                        <!-- <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <div class="mui-media-object mui-pull-left">
+                                    <img  src="./images/ic_bcj.png">
+                                </div>
+                                <div class="mui-media-body">
+                                    移动端凑单品：海天 鲜味 生抽 1.28L
+                                    <span> 10.9元</span>
+                                    <p class='mui-ellipsis'>
+                                        京东商城 | 10-25 14:10
+                                        <span class="mui-icon mui-icon-chat">有2人评论</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 品牌排行 -->
+            <div class="mmbuy_brand mmbuy_goods">
+                品牌导航
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </div>
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+            <li>
+                <a href="{{v.titlehref}}">
+                    {{@v.img}}
+                    <p>{{v.name}}</p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type='text/html' id="tpl2">
+        {{ each result v i }}
+            <li class="mui-table-view-cell mui-media">
+                <a href="moneyproduct.html?productid={{v.productId}}">
+                    <div class="mui-media-object mui-pull-left">
+                        {{@v.productImgSm}}
+                    </div>
+                    <div class="mui-media-body">
+                        {{v.productName}}
+                        <span> {{v.productPinkage}}</span>
+                        <p class='mui-ellipsis'>
+                            {{v.productFrom}} | {{v.productTime }}
+                            <span class="mui-icon mui-icon-chat">{{v.productComCount}}</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        {{ /each }}
+        <div class="more">
+            <!-- 进入省钱控页面 -->
+            <a href="moneyctrl.html">更多优惠信息</a>
+        </div>
+    </script>
+</body>
+
+</html>

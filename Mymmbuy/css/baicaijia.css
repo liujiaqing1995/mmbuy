@@ -1,0 +1,129 @@
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+  color: red;
+}
+.inItem {
+  position: relative;
+  padding: .1rem .06rem;
+  background-color: #fff;
+  margin-bottom: .1rem;
+}
+.inItem .inItem_pic {
+  width: 1.35rem;
+  height: 1.3rem;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: .1rem;
+  margin-left: .06rem;
+}
+.inItem .inItem_pic img {
+  width: 100%;
+  height: 100%;
+}
+.inItem .inItem_info {
+  overflow: hidden;
+  padding-left: 1.4rem;
+  width: 100%;
+}
+.inItem .info_name {
+  font-size: .14rem;
+  height: 0.28rem;
+  line-height: .28rem;
+}
+.inItem .info_roll {
+  height: 0.28rem;
+  line-height: .28rem;
+  font-size: .24rem;
+  color: #fc353a;
+}
+.inItem .info_roll i {
+  font-style: normal;
+  font-size: .16rem;
+}
+.inItem .info_roll em {
+  font-size: .12rem;
+  vertical-align: middle;
+  font-style: normal;
+  margin-left: .05rem;
+}
+.inItem .info_roll del {
+  font-size: 12px;
+  vertical-align: middle;
+  font-style: normal;
+  color: #ccc;
+}
+.inItem .bar {
+  margin-right: .1rem;
+  margin-top: .05rem;
+  display: block;
+  height: .14rem;
+  width: .82rem;
+  border: 1px solid #fc353a;
+  border-radius: .05rem;
+  background-color: #ffb7b7;
+  position: relative;
+}
+.inItem .bar i {
+  height: 0.12rem;
+  width: 1rem;
+  background-color: #fff;
+}
+.inItem .bar i em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.13rem;
+  display: block;
+  border-radius: .05rem;
+  background-color: #fc353a;
+}
+.inItem .bar i span {
+  display: block;
+  z-index: 10;
+  font-style: normal;
+  text-align: center;
+  width: 100%;
+  font-size: .12rem;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.inItem .bar b {
+  position: absolute;
+  top: 60%;
+  right: 100%;
+  transform: translate(100%, -60%);
+  font-size: .12rem;
+  color: red;
+  right: -100%;
+}
+.inItem .inItem_box {
+  width: 100%;
+  padding-top: .2rem;
+}
+.inItem .inItem_box .inItem_get {
+  height: .28rem;
+  line-height: .28rem;
+  width: 1.2rem;
+  float: left;
+  border: 1px dotted #E4393C;
+  font-size: .14rem;
+  color: red;
+  text-align: center;
+}
+.inItem .inItem_box .inItem_order {
+  float: right;
+  margin-right: .1rem;
+  background-color: #FF5E5D;
+  width: .6rem;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  font-size: .12rem;
+  color: #fff;
+  border-radius: .05rem;
+}

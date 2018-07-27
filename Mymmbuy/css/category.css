@@ -1,0 +1,24 @@
+.container .mui-table-view {
+  background-color: transparent;
+}
+.container .mui-navigate-right {
+  font-size: .16rem;
+  font-weight: 700;
+}
+.container .mui-table-view-cell.mui-collapse .mui-collapse-content {
+  padding: 0;
+}
+.container .second li {
+  float: left;
+  font-size: .14rem;
+  width: 33.33%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.container .second li:nth-child(3n) {
+  border-right: none;
+}
+.container .second li a {
+  padding: .1rem;
+}

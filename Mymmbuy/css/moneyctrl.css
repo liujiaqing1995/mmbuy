@@ -1,0 +1,45 @@
+.mmbuy_cheap .mui-table-view .mui-media-object {
+  width: 1rem;
+  height: 1rem;
+  max-width: 1rem;
+  line-height: 1;
+}
+.mmbuy_cheap .mui-table-view .mui-media-object img {
+  width: 1rem;
+  height: 1rem;
+}
+.mmbuy_cheap .mui-table-view-cell > a:not(.mui-btn) {
+  white-space: normal;
+}
+.mmbuy_cheap .more {
+  background-color: #fff;
+  height: .52rem;
+  padding: .1rem;
+  margin-bottom: .1rem;
+}
+.mmbuy_cheap .more a {
+  display: block;
+  height: 100%;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: .32rem;
+  color: #333;
+  font-size: .14rem;
+  background: linear-gradient(#ffffff, #f4f4f4);
+}
+.mui-media-body {
+  font-size: .14rem;
+}
+.mui-media-body span:first-of-type {
+  color: red;
+}
+.mui-media-body .mui-ellipsis {
+  margin-top: .4rem;
+}
+.mui-media-body .mui-ellipsis span {
+  padding: 1px;
+  line-height: 1;
+  float: right;
+  font-size: .12rem;
+  color: #8f8f94;
+}

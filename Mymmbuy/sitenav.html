@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买商城导航</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sitenav.css">
+
+</head>
+
+<body>
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header hearder_pos">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mui-clearfix">
+                    <a href="javascript:history.go(-1);" class="pos_left">
+                        <span class="mui-icon mui-icon-arrowleft"></span>
+                    </a>
+                    <h1>商品导航</h1>
+                    <div class="pos_right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主题内容 -->
+            <div class="container">
+                <div class="info mui-clearfix">
+                       <!-- 模板引擎渲染 -->
+                </div>
+            </div>
+
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/sitenav.js"></script>
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+        <a href={{v.navHref}}
+        target="_blank">
+        <img src={{v.navImg}} alt="">{{v.navTitle}}
+        </a> 
+        {{/each}} 
+            
+    </script>
+</body>
+
+</html>

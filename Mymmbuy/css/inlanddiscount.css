@@ -1,0 +1,40 @@
+.wrap {
+  background-color: #fff;
+}
+.wrap li {
+  height: 2.7rem;
+  padding: .2rem;
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.wrap li:nth-child(even) {
+  border-right: none;
+}
+.wrap li img {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  margin: 0 auto;
+}
+.wrap li h3 {
+  font-size: .14rem;
+  padding-top: .1rem;
+  margin: 0;
+  height: .45rem;
+  line-height: .18rem;
+}
+.wrap li span {
+  display: block;
+  color: #ff6c00;
+  font-size: .14rem;
+  height: 0.3rem;
+  line-height: .3rem;
+}
+.wrap li p {
+  height: 0.3rem;
+  line-height: .3rem;
+  margin: 0;
+  font-size: .12rem;
+}

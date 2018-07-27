@@ -1,0 +1,24 @@
+.mmbuy_nav {
+  margin-top: .1rem;
+  width: 100%;
+  padding: .15rem 0;
+  background-color: #fff;
+}
+.mmbuy_nav li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.mmbuy_nav li.hidden {
+  display: none;
+}
+.mmbuy_nav a img {
+  margin: 0 auto .05rem;
+  width: .58rem;
+  height: .58rem;
+}
+.mmbuy_nav a p {
+  text-align: center;
+  color: #8f8f94;
+  margin-bottom: .1rem;
+}

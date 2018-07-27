@@ -1,0 +1,23 @@
+.container {
+  background-color: #fff;
+  padding: .1rem 0 .2rem;
+}
+.container .info {
+  width: 3rem;
+  margin: 0 auto;
+  padding: .05rem;
+}
+.container .info a {
+  padding: .1rem;
+  background-color: #F4F4F4;
+  border: 1px solid #BFBFBF;
+  float: left;
+  font-size: .16rem;
+  margin: .03rem;
+}
+.container .info a img {
+  float: left;
+  margin-right: .05rem;
+  margin-top: .03rem
+                ;
+}

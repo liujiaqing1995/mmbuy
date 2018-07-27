@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买优惠卷列表页面</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
+</head> 
+
+<body class="bg">
+     <!-- 弹出图片 -->        
+     <div class="ceng hidden">
+        <div class="ceng_btns">
+            <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=" 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券">
+            <button type="button" class="mui-btn mui-pull-left">&lt;</button>
+            <button type="button" class="mui-btn mui-pull-right">&gt;</button>
+        </div>
+        
+
+    </div>
+    <div class="mui-scroll-wrapper mui-scroll-wrapper-copy">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header hearder_pos">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mmbuy_bg mui-clearfix">
+                    <a href="javascript:history.go(-1);" class="pos_left">
+                        <span class="mui-icon mui-icon-arrowleft"></span>
+                    </a>
+                    <h1>优惠卷</h1>
+                    <div class="pos_right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 温馨提示 -->
+            <div class="tip">
+                <p style="font-size: 0.12rem;margin:0">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+            </div>
+            <!-- 优惠卷列表 -->
+            <div class="mmbuy_cheap coupon_list">
+                <div class="mmbc_content">
+                    <ul class="mui-table-view">
+                        <!-- 模板引擎动态渲染 -->  
+                    </ul>
+                </div>
+            </div> 
+           
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/couponproduct.js"></script>
+
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <div class="mui-media-object mui-pull-left" data-index="{{i}}">
+                    {{@v.couponProductImg}}
+                </div>
+                <div class="mui-media-body">
+                    {{v.couponProductName}}
+                    <span class="row">{{v.couponProductPrice}}</span>
+                    <p class='mui-ellipsis small pred'>
+                     {{v.couponProductTime}}
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+            
+    </script>
+
+</body>
+
+</html>

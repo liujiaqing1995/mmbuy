@@ -1,0 +1,97 @@
+.wrap {
+  background-color: #fff;
+  padding-top: .1rem;
+}
+.wrap .item_title {
+  height: 2rem;
+  padding-top: .1rem;
+}
+.wrap .item_title p {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  font-size: .18rem;
+  color: #000;
+}
+.wrap .item_img {
+  height: 2rem;
+  text-align: center;
+  padding-bottom: .3rem;
+  position: relative;
+}
+.wrap .item_img a {
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: .24rem;
+}
+.wrap .item_img a img {
+  width: .4rem;
+  height: .4rem;
+}
+.wrap .item_img img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.wrap .item_consult li {
+  width: 33.33%;
+  height: 0.4rem;
+  line-height: .4rem;
+  float: left;
+  color: #fff;
+  font-size: .16rem;
+}
+.wrap .item_consult li a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.wrap .item_consult li:nth-child(1) {
+  background: linear-gradient(#ffa632, #ff9000);
+}
+.wrap .item_consult li:nth-child(2) {
+  background: linear-gradient(#ffd050, #ffbb00);
+}
+.wrap .item_consult li:nth-child(3) {
+  background: linear-gradient(#ffd050, #ffd050);
+}
+.wrap .item_buy {
+  padding: .1rem;
+  font-size: .14rem;
+}
+.wrap .item_note {
+  padding-left: .1rem;
+  padding-bottom: .1rem;
+  line-height: .4rem;
+  font-size: .12rem;
+  color: #888;
+  background-color: #fff;
+  border-top: 1px solid #bbb;
+  border-bottom: .04rem solid #747474;
+}
+.user_comment > p {
+  background-color: #dbdbdb;
+  text-align: center;
+  height: 0.4rem;
+  font-size: .14rem;
+  line-height: .4rem;
+  color: #000;
+  margin: 0;
+}
+.user_comment .comment {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  font-size: .12rem;
+  padding: .1rem;
+}
+.user_comment .comment p {
+  height: 0.15rem;
+}
+.user_comment .comment span {
+  float: right;
+  margin-left: 3rem;
+}
+.user_comment .comment .tall {
+  color: #8f8f94;
+}

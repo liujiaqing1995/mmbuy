@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价搜索</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/category.css">
+
+</head>
+
+<body>
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mui-clearfix">
+                    <a href="index.html" class="mui-pull-left">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="mui-pull-right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <!-- 头部下面 -->
+                <div class="mmbuy_hbottom">
+                    <div class="mhb_content">
+                        <input type="text" placeholder="请输入你想比价的商品" ,>
+                    </div>
+                    <button class="but">搜索</button>
+
+                </div>
+            </div>
+            <!-- 大分类 -->
+            <div class="container">
+                <ul class="mui-table-view .mui-badge">
+                    <!-- https://blog.csdn.net/brucecheng22/article/details/46917169 -->
+                    <!-- 模板引擎 渲染 -->
+                    <!-- <li class="mui-table-view-cell mui-collapse">
+                        <a class="mui-navigate-right" href="javascipt:;">大家电</a>
+                        <div class="mui-collapse-content">
+                            <ul class="second mui-clearfix"> -->
+                               <!-- 模板引擎动态渲染 -->
+                            <!-- </ul>
+                        </div>
+                    </li> -->
+
+                </ul>
+            </div>
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/category.js"></script>
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="javascipt:;" data-titleId ="{{v.titleId}}">{{v.title}}</a>
+                <div class="mui-collapse-content">
+                    <ul class="second mui-clearfix">
+                    </ul>
+                </div>
+            </li> 
+        {{/each}}
+    </script>
+    <script type='text/html' id="tpl2">
+        {{each result v i}}
+            <li>
+                <a href="javascript:;" data-categoryid = "{{v.categoryId}}">{{v.category}}</a>
+            </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

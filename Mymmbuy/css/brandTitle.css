@@ -1,0 +1,25 @@
+.title {
+  background-color: #fff;
+  padding: .08rem .1rem;
+}
+.title p {
+  height: .36rem;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  line-height: .36rem;
+  padding-left: .1rem;
+  font-size: .16rem;
+  color: #874604;
+  margin: 0;
+}
+.brand_list .mui-table-view {
+  background-color: transparent;
+}
+.brand_list .mui-table-view-cell > a:not(.mui-btn) {
+  font-size: .16rem;
+  font-weight: bold;
+  border: none;
+}
+.brand_list .mui-table-view-cell {
+  border-bottom: 1px solid #ccc;
+}

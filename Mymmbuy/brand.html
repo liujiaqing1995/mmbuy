@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买品牌大全列表</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brand.css">
+
+</head>
+
+<body>
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mui-clearfix">
+                    <a href="index.html" class="mui-pull-left">
+                        <img src="./images/header_logo.png" alt="">
+                    </a>
+                    <div class="mui-pull-right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+                <!-- 头部下面 -->
+                <div class="mmbuy_hbottom">
+                    <div class="mhb_content">
+                        <input type="text" placeholder="请输入你想比价的商品" ,>
+                    </div>
+                    <button class="but">搜索</button>
+
+                </div>
+            </div>
+            <!-- 面包屑导航 -->
+            <div class="bread_nav mui-clearfix">
+                <div class="bn_left mui-full-left">
+                    <a href="index.html">首页 &gt;</a>
+                    <a href="brandTitle.html">全部分类 &gt;</a>
+                    <a href="#" class="category_name"></a>
+                    <button class="mui-btn mui-btn-outlined">筛选</button>
+                </div>
+            </div>
+            <!-- 主题内容 -->
+            <!-- 哪个牌子好 -->
+            <div class="mmbuy_cheap which_brand">
+                <div class="mmbc_title mmbuy_goods brand_title">
+                    哪个牌子好
+                </div>
+                <div class="mmbc_content">
+                    <ul class="mui-table-view">
+                        <!-- 模板引擎动态渲染 -->
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 销量排行 -->
+            <div class="mmbuy_cheap sales">
+                <div class="mmbc_title mmbuy_goods brand_title">
+                    销量排行
+                </div>
+                <div class="mmbc_content">
+                    <ul class="mui-table-view">
+                        <!-- 模板引擎动态渲染 -->
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 最新评论 -->
+            <div class="mmbuy_cheap news">
+                <div class="mmbc_title mmbuy_goods brand_title">
+                    最新评论
+                </div>
+                <div class="mmbc_content">
+                    <ul class="mui-table-view">
+                        <!-- 模板引擎动态渲染 -->                      
+                    </ul>
+                </div>
+            </div>
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/brand.js"></script>
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="productlist.html?categoryid={{v.categoryId}}&pageid=1">
+                <span>{{i+1}}</span>
+                <div class="mui-media-body">
+                    {{v.brandName}}
+                    <p class='mui-ellipsis'>
+                        {{v.brandInfo}}
+                    </p>
+                </div>
+                <em class="mui-icon mui-icon-arrowright"></em>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type='text/html' id="tpl2">
+        {{each result v i}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="bijia.html?productid={{v.productId}}">
+                <div class="mui-media-object mui-pull-left">
+                    {{@v.productImg}}
+                </div>
+                <div class="mui-media-body">
+                    {{v.productName}}
+                    <span class="big">{{productPrice}}<em>★★★★★</em></span>
+                    <p class='mui-ellipsis small'>
+                        {{v.productQuote}} | {{productCom}}
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type='text/html' id="tpl3">
+        {{each result v i}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <div class="mui-media-object mui-pull-left">
+                    <img src="./images/ic_bcj.png">
+                </div>
+                <div class="mui-media-body">
+                    移动端凑单品：海天 鲜味 生抽 1.28L
+                </div>
+            </a>
+            <div class="news_box">
+                <div class="name">             
+                    g***n:<em class="star5">★★★★★</em>
+                    <i>2016/2/18</i>
+                </div>
+                <div class="info">外观：精工细作，颜值再度提高作为一台55寸的大电视，乐视X55正面看起来非常大气，配合Letv独有的造型独特的云底座，整体视觉观感出色。会发光的Letv标识被放置在了机器的左下角，标识右侧，安排有一个圆形的遥控器信号接收区域。乐视X55的边框处理相当讲究，采用了时下智能手机产品上常见的倒角工艺，配合表面的金属拉丝，展现出产品细节上的用心。同时，乐视X55的正面屏幕边框也非常窄，正面边框与屏幕内部黑边的宽度总和近似等于一部普通智能手机的厚度。在成为会员之前，用户对所有高清视频拥有6分钟的试看时间。应用扩展方面，EUI5延续了超级电视一贯的风格，对于一台安卓系统的设备来说，系统中自带电视管家等应用可以进行内存清理等操作，方便实用。总结：超级电视的完善之作智能电视发展的日渐成熟，让智能电视产品本身越来越难以出现具有突破性的亮点，即使是有了超级之名的乐视TV，在实际的使用上，也并没什么真正让人眼前一亮的功能。此时乐视X55出现的意义，我们觉得是更像是对已经在行业占据领先位置的乐视TV的一次完善，出色的显示效果，更加精致的外观，回归实用的遥控器，配合软件上功能全面的EUI系统，乐视X55称的上市超级电视的完善之作。加油吧，京东</div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

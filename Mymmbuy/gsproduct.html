@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买凑单品</title>
+    <link rel="icon" href="./1.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+
+</head>
+
+<body>
+
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 头部 -->
+            <div class="mmbuy_header hearder_pos">
+                <!-- 头部上面 -->
+                <div class="mmbuy_htop mui-clearfix">
+                    <a href="javascript:history.go(-1);" class="pos_left">
+                        <span class="mui-icon mui-icon-arrowleft"></span>
+                    </a>
+                    <h1>凑单品</h1>
+                    <div class="pos_right">
+                        <img src="./images/header_app.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 地区导航 -->
+            <div class="cities">
+                <ul class="mui-clearfix">
+                    <li>京东
+                        <span class="mui-icon mui-icon-arrowdown"></span>
+                    </li>
+                    <li>华北
+                        <span class="mui-icon mui-icon-arrowdown"></span>
+                    </li>
+                    <li>全部价格
+                        <span class="mui-icon mui-icon-arrowdown"></span>
+                    </li>
+                    <li>
+                        <span class="mui-icon mui-icon-list"></span>
+                    </li>
+                </ul>
+                <div class="cities_list">
+                    <ul class="mui-clearfix  hidden">
+                        <!-- 模板引擎渲染 -->
+                    </ul>
+                </div>
+            </div>
+            <!-- 主题内容 -->
+            <div class="container mui-clearfix">
+               <!-- 模板引擎渲染 -->
+            </div>
+
+            <!-- 连接 -->
+            <div class="mmbuy_link">
+                <ul class="mui-clearfix">
+                    <li>
+                        <a href="javascript:;">登录</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">注册</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="scrollToTop">
+                            <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmbuy_footer">
+                <p>
+                    <a href="#">手机App下载 </a>
+                    <span>慢慢买手机版</span> -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/gsproduct.js"></script>
+    <script type='text/html' id="tpl">
+        {{each result v i}}
+        <li  data-shopid="{{v.shopId}}">
+            <a href="javascript:;">
+                {{v.shopName}}
+                <span style="color:red" class="mui-icon mui-pull-right" ></span>
+            </a>
+            
+        </li>
+        {{/each}} 
+            
+    </script>
+    <script type='text/html' id="tpl2">
+        {{each result v i}}
+        <li  data-areaid="{{v.areaId}}">
+            <a href="javascript:;">
+                {{v.areaName}}
+                <span style="color:red" class="mui-icon  mui-pull-right" ></span>
+            </a>
+        </li>
+        {{/each}}      
+    </script>
+    <script type='text/html' id="tpl3">
+        {{each result v i}}
+            <a href="https://www.tmall.com/">
+                <img src={{v.productImg}} alt="">
+                <p class="mui-ellipsis">{{v.productName}}</p>
+                <span>{{v.productPrice}}</span>
+                <button class="mui-btn mui-pull-right">去凑单</button>
+            </a>
+        {{/each}}      
+    </script>
+</body>
+
+</html>
